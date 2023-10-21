@@ -1,4 +1,4 @@
-name: kro
+name: kroy
 
 on:
   push:
@@ -10,3 +10,8 @@ jobs:
   build:
 
     runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the site
+      run: |
+        mkdir /var/www/poc2
